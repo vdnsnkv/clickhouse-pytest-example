@@ -1,0 +1,4 @@
+black==23.7.0
+clickhouse-driver==0.2.6
+Faker==19.3.1
+pytest==7.4.0

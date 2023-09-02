@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  clickhouse:
+    platform: linux/x86_64
+    image: yandex/clickhouse-server:latest
+    container_name: clickhouse
+    restart: always
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9009:9009"
+    volumes:
+      - ./temp-data/clickhouse:/var/lib/clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
